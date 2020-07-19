@@ -2,6 +2,7 @@
 #include<glm/vec3.hpp>
 #include<corecrt_math_defines.h>
 #include "shape.hpp"
+#include <string>
 
 #ifndef SPHERE
 #define SPHERE
@@ -13,10 +14,14 @@ private:
 	float radius_;
 
 public:
-
 	Sphere(glm::vec3 center, float radius) :
 		center_{ center },
 		radius_{ radius }
+	{}
+	Sphere(glm::vec3 center, float radius, std::string name, Color color) :
+		center_{ center },
+		radius_{ radius },
+		Shape(name, color)
 	{}
 
 	float area() const

@@ -1,6 +1,8 @@
 #include<glm/vec3.hpp >
 #include "shape.hpp"
 #include <cmath>
+#include "color.hpp"
+#include <string>
 
 #ifndef BOX
 #define BOX
@@ -15,6 +17,12 @@ public:
 	Box(glm::vec3 max, glm::vec3 min) :
 		max_{ max },
 		min_{ min }
+	{}
+
+	Box(glm::vec3 max, glm::vec3 min, std::string name, Color color) :
+		max_{ max },
+		min_{ min },
+		Shape{name, color}
 	{}
 
 	float volume() const
@@ -77,7 +85,7 @@ public:
 		//Fläche c
 		float c = y * z;
 
-		return a + b + c;
+		return (a + b + c)*2;
 	}
 
 };

@@ -6,6 +6,9 @@
 #include "box.hpp"
 
 TEST_CASE("5.2") {
+	Box c{ glm::vec3{ 1.0,1.0,1.0 }, glm::vec3{ 2.0,2.0,2.0 } };
+	REQUIRE(c.area() == 6.0);
+	REQUIRE(c.volume() == Approx(1.73205));
 
 	Box a{ glm::vec3{ 1,2,3 }, glm::vec3{ 4,5,6 } };
 	REQUIRE(a.area() == 54);
