@@ -26,7 +26,7 @@ public:
 
 	float volume() const
 	{
-		return 4 / 3 * M_PI * pow(radius_, 3);
+		return 4.0 / 3.0 * M_PI * pow(radius_, 3.0);
 	}
 };
 
