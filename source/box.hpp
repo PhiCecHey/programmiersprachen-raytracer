@@ -7,7 +7,7 @@
 #ifndef BOX
 #define BOX
 
-class Box : Shape {
+class Box : public Shape {
 private:
 	glm::vec3 max_;
 	glm::vec3 min_;
@@ -86,6 +86,10 @@ public:
 		float c = y * z;
 
 		return (a + b + c)*2;
+	}
+
+	std::string type() const override {
+		return "Box";
 	}
 
 };

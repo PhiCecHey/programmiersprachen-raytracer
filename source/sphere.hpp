@@ -33,6 +33,12 @@ public:
 	{
 		return 4.0 / 3.0 * M_PI * pow(radius_, 3.0);
 	}
+
+	std::string type() const override {
+		return "Sphere";
+	}
+
+
 };
 
 #endif

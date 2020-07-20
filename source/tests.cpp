@@ -18,6 +18,11 @@ TEST_CASE("5.2") {
 	REQUIRE(b.area() == Approx(615.752));
 	REQUIRE(b.volume() == Approx(1436.755));
 }
+	
+TEST_CASE("5.4") {
+	Box c{ glm::vec3{ 1.0,1.0,1.0 }, glm::vec3{ 2.0,2.0,2.0 }, "c", {0,0,0} };
+	std::cout << c;
+}
 
 int main(int argc, char* argv[])
 {
